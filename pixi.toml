@@ -7,7 +7,7 @@
 
 [project]
 name = "opentelemetry-instrumentation-asyncio-feedstock"
-version = "3.52.2"  # conda-smithy version used to generate this file
+version = "3.52.3"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/opentelemetry-instrumentation-asyncio-feedstock"
 authors = ["@conda-forge/opentelemetry-instrumentation-asyncio"]
 channels = ["conda-forge"]
