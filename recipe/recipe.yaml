@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: opentelemetry-instrumentation-asyncio
-  version: "0.60b0"
+  version: "0.60b1"
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/opentelemetry_instrumentation_asyncio-${{ version }}.tar.gz
-  sha256: ccd3713aa5608481c23cec6ee7ac2105a215b40ccfcded340b4d3daad2f8c059
+  sha256: 0ddb8ada367c7102662c42433740779a055eace08d65079c86ef65e75d1a66b3
 
 build:
   number: 0
