@@ -14,7 +14,7 @@ source:
   sha256: 0ae623583dcbe0ae17d63c995906d02a64213652ff180875ace680d1e6c286ec
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -28,7 +28,7 @@ requirements:
     - opentelemetry-api >=1.14,<2.dev0
     - opentelemetry-instrumentation ==${{ version }}
     - opentelemetry-semantic-conventions ==${{ version }}
-    - wrapt >=1.0.0,<2.0.0
+    - wrapt >=1.0.0,<3.0.0
 
 tests:
   - python:
