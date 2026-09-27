@@ -2,17 +2,15 @@
 schema_version: 1
 
 context:
-  version: "0.65b0"
+  version: 0.66b0
 
 package:
   name: opentelemetry-instrumentation-asyncio
   version: ${{ version }}
 
 source:
-  url:
-    https://pypi.org/packages/source/o/opentelemetry-instrumentation-asyncio/opentelemetry_instrumentation_asyncio-${{
-    version }}.tar.gz
-  sha256: fccfde3966e078a4bcd36e2e1788a8055c86a26732b6e676d1eaec8862cc41ea
+  url: https://pypi.org/packages/source/o/opentelemetry-instrumentation-asyncio/opentelemetry_instrumentation_asyncio-${{ version }}.tar.gz
+  sha256: 72bbe1ec3d01838e7a89bde91eeaeb88534d4340a129509c51b71edaf25fafe7
 
 build:
   number: 0
@@ -30,20 +28,20 @@ requirements:
     - opentelemetry-instrumentation ==${{ version }}
     - opentelemetry-semantic-conventions ==${{ version }}
     - wrapt >=1.0.0,<3.0.0
-
+    - opentelemetry-instrumentation ==0.66b0
+    - opentelemetry-semantic-conventions ==0.66b0
 tests:
   - python:
       imports:
-       - opentelemetry
-       - opentelemetry.instrumentation.asyncio
+        - opentelemetry
+        - opentelemetry.instrumentation.asyncio
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
-  homepage:
-    https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/instrumentation/opentelemetry-instrumentation-asyncio
+  homepage: https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/instrumentation/opentelemetry-instrumentation-asyncio
   license: Apache-2.0
   license_file: LICENSE
   summary: OpenTelemetry instrumentation for asyncio
