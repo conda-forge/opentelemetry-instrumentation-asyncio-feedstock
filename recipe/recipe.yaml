@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 0.66b1
+  version: 0.66b2
 
 package:
   name: opentelemetry-instrumentation-asyncio
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/opentelemetry-instrumentation-asyncio/opentelemetry_instrumentation_asyncio-${{ version }}.tar.gz
-  sha256: c2a593daee5eadd487fd08608b506da25f8e3805cbce1d5595097f8b427991d0
+  sha256: 41e21485a043d107da86b69032cc87393d5377cd306d6cddee64c6fddd17487c
 
 build:
   number: 0
@@ -28,6 +28,8 @@ requirements:
     - opentelemetry-instrumentation ==${{ version }}
     - opentelemetry-semantic-conventions ==${{ version }}
     - wrapt >=1.0.0,<3.0.0
+    - opentelemetry-instrumentation ==0.66b2
+    - opentelemetry-semantic-conventions ==0.66b2
 tests:
   - python:
       imports:
